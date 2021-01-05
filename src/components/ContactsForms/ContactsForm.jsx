@@ -61,29 +61,3 @@ export default function ContactsForms({ addContact }) {
     </form>
   );
 }
-
-// // добавление значения в input
-// onHandleChange = ({ target }) => {
-//   const { name, value } = target;
-//   this.setState({ [name]: value });
-// };
-
-// // сабмит формы
-// handleSubmit = (e) => {
-//   // страница не перезагружается
-//   e.preventDefault();
-
-//   const { name, number } = this.state;
-//   const { addContact } = this.props;
-
-//   addContact({ name, number });
-
-//   console.log(this.state);
-
-//   this.reset();
-// };
-
-// // очистка input
-// reset = () => {
-//   this.setState({ name: '', number: '' });
-// };
