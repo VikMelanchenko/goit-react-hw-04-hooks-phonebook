@@ -1,10 +1,9 @@
-import useLocalStorage from '../../hooks/useLocalStorage';
-
 import s from './ContactsForm.module.scss';
+import { useState } from 'react';
 
 export default function ContactsForms({ addContact }) {
-  const [name, setName] = useLocalStorage('name', '');
-  const [number, setNumber] = useLocalStorage('number', '');
+  const [name, setName] = useState('');
+  const [number, setNumber] = useState('');
 
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -27,6 +26,10 @@ export default function ContactsForms({ addContact }) {
     e.preventDefault();
 
     addContact(name, number);
+    onReset();
+  };
+
+  const onReset = () => {
     setName('');
     setNumber('');
   };
